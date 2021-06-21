@@ -39,7 +39,7 @@ public class JSONscript : MonoBehaviour
         JObject jdataDemo = new JObject();
         jobj.Add("data", jdataDemo);
         jdataDemo.Add("_name", "Bhoomi");
-        jdataDemo.Add("_curHp", this.age);
+        jdataDemo.Add("_age", this.age);
 
         JArray jarraydata = JArray.FromObject(friends);
         jdataDemo.Add("friends", jarraydata);
@@ -62,8 +62,8 @@ public class JSONscript : MonoBehaviour
 
         JObject jsonObj = JObject.Parse(data);
         pname = jsonObj["componentName"].Value<string>();
-        age = jsonObj["data"]["_curHp"].Value<int>();
+        age = jsonObj["data"]["_age"].Value<int>();
         friends = jsonObj["data"]["friends"].ToObject<string[]>();
-        places = jsonObj["data"][places].ToObject<string[]>();
+        places = jsonObj["data"]["places"].ToObject<string[]>();
     }
 }
