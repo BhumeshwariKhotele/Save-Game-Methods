@@ -9,6 +9,7 @@ public class AnotherMethod : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         
     }
 
@@ -29,13 +30,13 @@ public class AnotherMethod : MonoBehaviour
     {
         
         string filepath = Application.persistentDataPath + "/MyInfo.file";
-          StreamWriter sw = new StreamWriter(filepath);
-        // FileStream fs = new FileStream(filepath,FileMode.OpenOrCreate);
+          //StreamWriter sw = new StreamWriter(filepath);
+        FileStream fs = new FileStream(filepath,FileMode.OpenOrCreate);
         print("-----------------------------");
-        //BinaryWriter sw = new BinaryWriter(fs);
-        sw.WriteLine(SystemInfo.deviceName);
-        sw.WriteLine(SystemInfo.systemMemorySize);
-        sw.WriteLine(Screen.currentResolution);
+        BinaryWriter sw = new BinaryWriter(fs);
+        sw.Write(SystemInfo.deviceName);
+        sw.Write(SystemInfo.systemMemorySize);
+       // sw.Write(Screen.currentResolution);
        
         //sw.Write((double)time);
        // fs.Close();
@@ -46,14 +47,14 @@ public class AnotherMethod : MonoBehaviour
     void GetPlayerData()
     {
         string filepath = Application.persistentDataPath + "/MyInfo.file";
-        StreamReader sr = new StreamReader(filepath);
-        //FileStream fs = new FileStream(filepath, FileMode.Open);
-        //BinaryReader sr = new BinaryReader(fs);
-        string systemName = sr.ReadLine();
+        //StreamReader sr = new StreamReader(filepath);
+        FileStream fs = new FileStream(filepath, FileMode.Open);
+        BinaryReader sr = new BinaryReader(fs);
+        string systemName = sr.ReadString();
        // RAM = sr.ReadInt32();
         //time = ((float)sr.ReadDouble());
         //print("System Name is = "+systemName "System Memory is = "+RAM);
-        //fs.Close();
+        fs.Close();
         sr.Close();
 
     }

@@ -309,7 +309,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1623730211}
   - component: {fileID: 1623730210}
-  - component: {fileID: 1623730212}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -324,11 +323,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623730209}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c56d7c341c46ce444a8a278f59725175, type: 3}
+  m_Script: {fileID: 11500000, guid: e05c9aebe35c8e84d980830ff26d8b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pname: Bhoomi
+  age: 24
+  friends:
+  - Sujal
+  - Varsha
+  places:
+  - Bhandara
+  - Pune
+  - Hyderabad
 --- !u!4 &1623730211
 Transform:
   m_ObjectHideFlags: 0
@@ -343,15 +351,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1623730212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1623730209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9301e40491919043beb039516d8bb26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
