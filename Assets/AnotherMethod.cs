@@ -29,7 +29,7 @@ public class AnotherMethod : MonoBehaviour
     void SetPlayerData()
     {
         
-        string filepath = Application.persistentDataPath + "/MyInfo.file";
+        string filepath = Application.persistentDataPath + "/MyInformation.file";
           //StreamWriter sw = new StreamWriter(filepath);
         FileStream fs = new FileStream(filepath,FileMode.OpenOrCreate);
         print("-----------------------------");
@@ -46,7 +46,7 @@ public class AnotherMethod : MonoBehaviour
 
     void GetPlayerData()
     {
-        string filepath = Application.persistentDataPath + "/MyInfo.file";
+        string filepath = Application.persistentDataPath + "/MyInformation.file";
         //StreamReader sr = new StreamReader(filepath);
         FileStream fs = new FileStream(filepath, FileMode.Open);
         BinaryReader sr = new BinaryReader(fs);
